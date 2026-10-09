@@ -1,0 +1,19 @@
+# Programs tracked by this repository.
+# Format:  owner/repo    asset-pattern
+# The pattern is a glob and must match ONLY the .deb you want
+# (check the file names on the project's Releases page).
+# For arm64, add a second line with the matching pattern.
+
+storytold/photocraft    photocraft-[0-9]*-linux-x86_64.deb
+storytold/wordcraft     wordcraft-[0-9]*-linux-x86_64.deb
+storytold/vectorcraft   vectorcraft-[0-9]*-linux-x86_64.deb
+storytold/deckcraft     deckcraft-[0-9]*-linux-x86_64.deb
+storytold/filmcraft     filmcraft-[0-9]*-linux-x86_64.deb
+
+# arm64 (e.g. Raspberry Pi). Uncomment if you need it; it roughly doubles
+# the size of the site (about 690 MB in total, the GitHub Pages limit is 1 GB).
+# storytold/photocraft  photocraft-[0-9]*-linux-aarch64.deb
+# storytold/wordcraft   wordcraft-[0-9]*-linux-aarch64.deb
+# storytold/vectorcraft vectorcraft-[0-9]*-linux-aarch64.deb
+# storytold/deckcraft   deckcraft-[0-9]*-linux-aarch64.deb
+# storytold/filmcraft   filmcraft-[0-9]*-linux-aarch64.deb
