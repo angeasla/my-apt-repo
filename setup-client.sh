@@ -11,8 +11,13 @@ install -d -m 0755 /etc/apt/keyrings
 curl -fsSL "$URL/myrepo.gpg" -o "/etc/apt/keyrings/$NAME.gpg"
 chmod 644 "/etc/apt/keyrings/$NAME.gpg"
 
+# Only the machine's native architecture (avoids "Skipping ... i386" notices
+# on systems with 32-bit support enabled).
+ARCH="$(dpkg --print-architecture)"
+
 cat > "/etc/apt/sources.list.d/$NAME.sources" <<EOF
 Types: deb
+Architectures: $ARCH
 URIs: $URL
 Suites: stable
 Components: main
